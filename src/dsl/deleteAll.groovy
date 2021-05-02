@@ -12,7 +12,7 @@ getProcedures(projectName).each {
   deleteProcedure(projectName: projectName, procedureName: it.name) 
 }
 
-getApplications(projectName).each {
+deleteApplication(projectName).each {
   deleteApplication(projectName: projectName, applicationName: it.name) 
 }
 
