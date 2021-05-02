@@ -17,8 +17,7 @@ componentNames.each { compName->
     component compName, {
         pluginKey = 'EC-Artifact'
         projectName = projName
-        //Se generan los properties por ambientes
-                
+   
         //Se genera el proceso del componente
         process processName, {
             processType = processTypeName
@@ -100,6 +99,7 @@ componentNames.each { compName->
                     }
                 }
             }
+            //Se generan los properties por ambientes
             property compName, {
             envs.each { envName->
                 property envName, {
