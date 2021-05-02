@@ -4,6 +4,7 @@ def componentNames = ["bff-mi-kchaug","ms-ban-kchaug"]
 def processName = "Deploy"
 def processTypeName = "DEPLOY"
 //Variables del subproceso
+//["nombre-tipo-ordenamiento"]
 def subTaskNames = ["Start-cmd-1", "Run Plan SB-runPlanBamboo-2", 
 "Create Release SB-CreateRelBamboo-2.1", "Run Plan Dev-runPlanBamboo-3", 
 "Create Release Dev-CreateRelBamboo-3.1", "Deploy-proc-4"]
