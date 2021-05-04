@@ -34,8 +34,6 @@ project projectName, {
 
             obj.each { v -> ef.setProperty(propertyName: "$[/myProcedure/Config/name]" + v.name, value: "" +v.id) } 
             '''.stripIndent()
-        //step "Paso 2", command : 'ectool setProperty /myPipeline/Deployment/Pais --value "Chile"'
-        //step "Paso 3", command : 'ectool setOutputParameter Pais "CHILE"'
     }
 
     pipeline pipelineName, {
@@ -46,19 +44,10 @@ project projectName, {
             task "Tarea 1", {
                 taskType = 'PROCEDURE'
                 subprocedure = 'Procedimiento'
-                //stageSummaryParameters = '[{"name":"Pais","label":"Pais"}]'
                 actualParameter = [
                     'bambooPlanKey': '$[bambooPlanKey]',
                 ]               
             }
-            /*task "Tarea 2", {
-                taskType = 'COMMAND'
-                subprocedure = 'RunCommand'
-                subpluginKey = 'EC-Core'               
-                actualParameter = [
-                    'commandToRun': 'echo $[/myStageRuntime/ec_summary/Pais]',
-                ]       
-            }*/
 
             task "Tarea 2", {
                 taskType = 'MANUAL'
