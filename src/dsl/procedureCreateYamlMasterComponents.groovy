@@ -147,10 +147,11 @@ void typeOfProcessStep(String _processStepName, String _projectName , String _co
                 subproject: _subProject
             )
             println index
-            if(index == 1){
-                typeOfDependency(_componentName, _projectName, 'Start', oldProcessStepName)
-            }else if(index > 1){
-                //typeOfDependency()
+            if(index == 0){
+                typeOfDependency(_componentName, _projectName, 'Start', it)
+            }else if(index >= 1){
+                println "index: "+index +" oldprocess:"+oldProcessStepName+" it:"+it
+                typeOfDependency(_componentName, _projectName, oldProcessStepName, it)
             }
             oldProcessStepName = it
         }
