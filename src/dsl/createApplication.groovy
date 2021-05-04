@@ -15,6 +15,18 @@ def AppTiers = AppEnvTiers.keySet()
 // Create new -------------------------------
 def ArtifactVersions = []
 project ProjectName, {
+  // Create Environments, Tiers and Resources
+  Envs.each { Env ->
+    environment environmentName: Env, {
+      EnvTiers.each() { Tier ->
+        def res = "${Env}"
+        environmentTier Tier, {
+          // create and add resource to the Tier
+          resource resourceName: res, hostName : "localhost"
+        }
+      }
+    }
+  } 
  // Environments
   application AppName, {
     AppTiers.each() { Tier ->
@@ -67,7 +79,7 @@ project ProjectName, {
           subcomponentProcess = processName
         }
         processDependency 'Start', targetProcessStepName: CompTier, {
-          branchCondition = '"$[/myJob/'+CompTier+']" == "true"'
+          branchCondition = '$[/javascript (\'$[/myJob/'+CompTier+']\' == \'true\')]'
           branchConditionName = "If " + CompTier
           branchConditionType = "CUSTOM"
           branchType = 'ALWAYS'
