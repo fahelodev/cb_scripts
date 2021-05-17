@@ -1,4 +1,5 @@
-/src/edu/
 /.idea/
 /out/
 /cloudbees.iml
+/src/cb_pipelines/
+/src/groovyessentials/
