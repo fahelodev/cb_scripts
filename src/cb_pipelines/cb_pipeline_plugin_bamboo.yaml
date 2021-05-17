@@ -1,0 +1,5 @@
+# yaml para creacion de pipeline con plugin bamboo
+pipelines:
+  pipeline_name: 'pipeline_bamboo'
+  description: 'alguna descripcion'
+  projectName: 'TSOFT'
