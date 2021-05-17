@@ -1,0 +1,21 @@
+#comments
+microservice: #objeto
+  - app: user-auntentication #list of object
+    port: 9000
+    version: 1.7
+    deployed: true # true/false - yes/no - on/off
+  - app: shopping-cart
+    port: 9002
+    version: [1.9,2.0,2.1] #list like array
+
+multilineString: |
+  esto es un String
+  multilinea que utiliza el
+  caracter Pipe para poder reconocer
+  esto en YAML y tb se puede agregar ($) para invocar variables de sistema
+  $JAVA_HOME, invoca la variable java_home
+
+unaLineaEnVariasLineas: >
+  se Describe
+  así, una linea
+  en varias lineas.

@@ -1,7 +1,7 @@
 project "DSL-Samples",{
     procedure "JSON to properties",{
     formalParameter "startingpath", defaultValue: "/myJob/expandedJson"
-    formalParameter "json", type: "textarea", defaultValue: '''\{"a": [1,2],"b":"a value","c": {"x":1,"y": {"n":"val","o":4,"p":[6,8]}},"d":100}'''.stripIndent()
+    formalParameter "json", type: "textarea", defaultValue: '''\\{"a": [1,2],"b":"a value","c": {"x":1,"y": {"n":"val","o":4,"p":[6,8]}},"d":100}'''.stripIndent()
 
  
     step "Create properties", shell: "ec-groovy", command: '''\

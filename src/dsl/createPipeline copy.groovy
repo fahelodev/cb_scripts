@@ -80,4 +80,3 @@ obj.each { v -> ectool setProperty '/myProcedure/Deployment' + v.name --value v.
 
     property 'Deployment', {
     }
-}
