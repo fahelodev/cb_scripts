@@ -1,8 +1,0 @@
-ssh-add -k bch-cloudbees-bastion.pem
-
-ssh-add -k bch-cloudbees-express-qa.pem
-ssh -A ec2-user@ec2-44-192-2-85.compute-1.amazonaws.com -L 9090:ip-10-0-3-171.ec2.internal:443
-
- 
-
- /myPipeline/Deployment/poc-devsecops-test-orquestador-dply
